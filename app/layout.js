@@ -16,7 +16,7 @@ const robotoFlex = Roboto_Flex({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${robotoFlex.className}`}>
-      <body className="light flex flex-col justify-center items-center w-screen mx-auto bg-background">
+      <body className="light flex flex-col justify-center items-center w-screen mx-auto bg-background overflow-hidden">
         <Navbar />
         {children}
       </body>
