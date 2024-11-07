@@ -1,8 +1,10 @@
-import './globals.css'
+import "./globals.css";
 export const metadata = {
   title: "Gavin Prior | Full stack developer",
   description: "A Portfolio website for Gavin Prior",
 };
+
+import Navbar from "./components/Navbar";
 
 import { Roboto_Flex } from "next/font/google";
 
@@ -13,8 +15,11 @@ const robotoFlex = Roboto_Flex({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={robotoFlex.className}>
-      <body>{children}</body>
+    <html lang="en" className={`${robotoFlex.className}`}>
+      <body className="light flex flex-col justify-center items-center w-screen mx-auto bg-background">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
