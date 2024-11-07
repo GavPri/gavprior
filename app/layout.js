@@ -3,9 +3,16 @@ export const metadata = {
   description: "A Portfolio website for Gavin Prior",
 };
 
+import { Roboto_Flex } from "next/font/google";
+
+const robotoFlex = Roboto_Flex({
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={robotoFlex.className}>
       <body>{children}</body>
     </html>
   );
