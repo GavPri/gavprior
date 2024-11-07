@@ -1,3 +1,4 @@
+import './globals.css'
 export const metadata = {
   title: "Gavin Prior | Full stack developer",
   description: "A Portfolio website for Gavin Prior",
