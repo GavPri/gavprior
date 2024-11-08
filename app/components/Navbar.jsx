@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { PiMoonStarsLight } from "react-icons/pi";
 import { TbSunLow } from "react-icons/tb";
+import Link from "next/link";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -37,8 +38,8 @@ const Navbar = () => {
     <header className="max-w-3xl w-full sticky top-0 z-20 bg-background/75 py-6 backdrop-blur-sm px-8 sm:px-0 bg-background text-foreground">
       <nav className="flex justify-between items-center">
         <ul className="flex gap-4 sm:gap-8">
-          <li>Home</li>
-          <li>Projects</li>
+          <Link href="/">Home</Link>
+          <Link href="/projects">Projects</Link>
           <li>Contact</li>
         </ul>
         <div className="flex gap-0 sm:ml-8">
