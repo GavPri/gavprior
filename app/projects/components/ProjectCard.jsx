@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ProjectCard = ({ title, description, imageSrc, tags, githubLink }) => {
   return (
-    <div className="rounded-xl border bg-card text-card-foreground shadow flex flex-col">
+    <div className="rounded-xl border bg-card text-cardForeground shadow flex flex-col">
       {/* Image Section */}
       <div className="flex flex-col space-y-1.5 p-6">
         <a href={imageSrc}>
@@ -20,8 +20,8 @@ const ProjectCard = ({ title, description, imageSrc, tags, githubLink }) => {
 
       {/* Title and Description Section */}
       <div className="p-6 pt-0 flex flex-col gap-2">
-        <h3 className="font-semibold leading-none tracking-tight">{title}</h3>
-        <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+        <h3 className="font-semibold leading-none tracking-tight text-foreground">{title}</h3>
+        <div className="prose max-w-full text-pretty font-sans text-xs text-mutedForeground dark:prose-invert">
           <p>{description}</p>
         </div>
       </div>
@@ -32,7 +32,7 @@ const ProjectCard = ({ title, description, imageSrc, tags, githubLink }) => {
           {tags.map((tag, index) => (
             <div
               key={index}
-              className="inline-flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 px-1 py-0 text-[10px]"
+              className="inline-flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondaryForeground hover:bg-secondary/80 px-1 py-0 text-[10px]"
             >
               {tag}
             </div>
@@ -42,7 +42,7 @@ const ProjectCard = ({ title, description, imageSrc, tags, githubLink }) => {
         {/* GitHub Link */}
         <div className="flex flex-row flex-wrap items-start gap-1">
           <a target="_blank" href={githubLink} rel="noopener noreferrer">
-            <div className="items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80 flex gap-2 px-2 py-1 text-[10px]">
+            <div className="items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primaryForeground shadow hover:bg-primary/80 flex gap-2 px-2 py-1 text-[10px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
