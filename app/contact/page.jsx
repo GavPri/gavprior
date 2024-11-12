@@ -1,4 +1,5 @@
 import React from "react";
+import { IoPaperPlaneOutline } from "react-icons/io5";
 
 const page = () => {
   return (
@@ -19,9 +20,16 @@ const page = () => {
             />
           </div>
           <div className="h-32 sm:col-span-2">
-            <textarea className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none" placeholder="Leave feedback, career oppurtunities or just say hello!" rows={12}/>
+            <textarea
+              className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-mutedForeground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+              placeholder="Leave feedback, career oppurtunities or just say hello!"
+              rows={6}
+            />
           </div>
         </div>
+        <button className="mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none bg-primary text-primaryForeground shadow hover:bg-primary/90 h-9 px-4 py-2 w-full disabled:opacity-50">
+          Send Message <IoPaperPlaneOutline size={25} />
+        </button>
       </form>
     </section>
   );
