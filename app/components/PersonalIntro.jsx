@@ -9,7 +9,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 const PersonalIntro = () => {
   return (
-    <section className="flex flex-col items-start mt-8 gap-8 md:flex-row-reverse">
+    <section className="flex flex-col items-start mt-8 gap-8 md:flex-row-reverse md:justify-between">
       <Image
         src="/images/hero.jpg"
         alt="Profile Picture"
