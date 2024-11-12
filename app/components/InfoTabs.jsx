@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 const InfoTabs = () => {
-  return (
-    <div>InfoTabs</div>
-  )
-}
+  const [tab, setTab] = useState("education");
+  return <div>InfoTabs</div>;
+};
 
-export default InfoTabs
+export default InfoTabs;
