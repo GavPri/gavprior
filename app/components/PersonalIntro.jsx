@@ -9,7 +9,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 const PersonalIntro = () => {
   return (
-    <section className="flex flex-col items-start mt-8 gap-8">
+    <section className="flex flex-col items-start mt-8 gap-8 md:flex-row-reverse">
       <Image
         src="/images/hero.jpg"
         alt="Profile Picture"
@@ -26,7 +26,7 @@ const PersonalIntro = () => {
           26 year old full stack developer from Ireland {"\u{1F1EE}\u{1F1EA}"}
         </p>
         <p className="text-foreground mt-2 font-light">
-        who loves coding and hiking
+          who loves coding and hiking
         </p>
         <section className="mt-8 flex items-center gap-8">
           <a href="/images/resume.pdf" download="/images/resume.pdf">
