@@ -9,9 +9,18 @@ const projectData = [
     tags: ["Node.js", "Express.js", "React.js", "TailwindCSS", "MongoDB"],
     githubLink: "https://github.com/GavPri/go-with-soph-mern",
   },
+  {
+    title: "Not Twitter Front End",
+    description:
+      "A simple social media site built with React.js and TailwindCSS, connecting to a Django RESTful API for handling user authentication, posts, comments, likes, and following users.",
+    imageSrc: "/images/notTwitterBanner.jpg", // Path to the project image
+    tags: ["React.js", "TailwindCSS"],
+    githubLink: "https://github.com/GavPri/twitter_front_end",
+  },
 ];
 
 const page = () => {
+  console.log(projectData || "No Data");
   return (
     <section className="mt-8 flex flex-col gap-8 pb-16">
       <h1 className="text-4xl text-foreground tracking-wide font-bold">
