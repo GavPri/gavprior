@@ -58,7 +58,7 @@ const InfoTabs = () => {
               Diploma in Full Stack Software Development ( Advanced Front End )
             </h3>
             <p className="text-sm text-foreground mb-6">
-              Completed a practical, industry-driven program covering front-end,
+              A program covering front-end,
               back-end, and databases. Developed real-world projects using HTML,
               CSS, JavaScript, Python, and Django.
             </p>
