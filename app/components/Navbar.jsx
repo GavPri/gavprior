@@ -40,7 +40,7 @@ const Navbar = () => {
         <ul className="flex gap-4 sm:gap-8">
           <Link href="/">Home</Link>
           <Link href="/projects">Projects</Link>
-          <li>Contact</li>
+          <Link href="/contact">Contact</Link>
         </ul>
         <div className="flex gap-0 sm:ml-8">
           <button
@@ -48,7 +48,11 @@ const Navbar = () => {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
-            {theme === "light" ? (<PiMoonStarsLight size={25} className="text-indigo-500"/>) : (<TbSunLow size={25} className="text-orange-300"/>)}
+            {theme === "light" ? (
+              <PiMoonStarsLight size={25} className="text-indigo-500" />
+            ) : (
+              <TbSunLow size={25} className="text-orange-300" />
+            )}
           </button>
         </div>
       </nav>
