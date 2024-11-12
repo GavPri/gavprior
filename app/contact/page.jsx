@@ -28,7 +28,7 @@ const page = () => {
           </div>
         </div>
         <button className="mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none bg-primary text-primaryForeground shadow hover:bg-primary/90 h-9 px-4 py-2 w-full disabled:opacity-50">
-          Send Message <IoPaperPlaneOutline size={25} />
+          Send Message <IoPaperPlaneOutline size={25} className="ml-4" />
         </button>
       </form>
     </section>
