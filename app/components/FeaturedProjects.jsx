@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FeaturedProjects = () => {
-  return (
-    <section>FeaturedProjects</section>
-  )
-}
+  return <section className="flex flex-col gap-8">FeaturedProjects</section>;
+};
 
-export default FeaturedProjects
+export default FeaturedProjects;
