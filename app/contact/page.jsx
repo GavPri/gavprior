@@ -1,6 +1,7 @@
 "use client";
 
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
@@ -27,27 +28,28 @@ const page = () => {
     const template_id = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const public_key = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-  const data = {
-    service_id: service_id, 
-    template_id: template_id,
-    user_id: public_key, 
-    template_params: {
-      from_name: formData.name,
-      from_email: formData.email,
-      to_name: "Gavin", 
-      message: formData.message,
-    },
-  };
-
+    const data = {
+      service_id: service_id,
+      template_id: template_id,
+      user_id: public_key,
+      template_params: {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_name: "Gavin",
+        message: formData.message,
+      },
+    };
 
     try {
-      console.log(data)
+      console.log(data);
       const response = await axios.post(
         "https://api.emailjs.com/api/v1.0/email/send",
         data
       );
-      console.log(response.data);
-    } catch (error) {}
+      toast.success("I got your email, I will reply asap!");
+    } catch (error) {
+      toast.error("There was an issue with you message");
+    }
   };
   return (
     <section className="mt-8 flex flex-col gap-8 pb-16 w-full">
@@ -87,6 +89,7 @@ const page = () => {
           Send Message <IoPaperPlaneOutline size={25} className="ml-4" />
         </button>
       </form>
+      <Toaster />
     </section>
   );
 };
