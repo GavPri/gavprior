@@ -18,6 +18,8 @@ const Page = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const router = useRouter()
+
   const validate = () => {
     let valid = true;
 
