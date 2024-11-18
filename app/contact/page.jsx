@@ -4,7 +4,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
 import { IoPaperPlaneOutline } from "react-icons/io5";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 const Page = () => {
   const [formData, setFormData] = useState({
@@ -13,12 +13,12 @@ const Page = () => {
     message: "",
   });
 
+  const router = useRouter(); // Initialize router to handle page navigation
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
-  const router = useRouter()
 
   const validate = () => {
     let valid = true;
@@ -55,7 +55,7 @@ const Page = () => {
 
     // Validate form before submitting
     if (!validate()) {
-      return; // Stop the submit if validation fails
+      return; // Stop submission if validation fails
     }
 
     const service_id = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -81,6 +81,11 @@ const Page = () => {
         data
       );
       toast.success("I got your email, I will reply ASAP!");
+
+      // Redirect to the home page after 2 seconds
+      setTimeout(() => {
+        router.push("/"); // Navigate to the home page
+      }, 3000);
     } catch (error) {
       toast.error("There was an issue with your message.");
     }
