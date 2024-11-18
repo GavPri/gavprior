@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website ReadMe.md
+
+![Banner Image](/images/readMeBanner.jpeg)
 
 ## Getting Started
 
@@ -19,18 +21,34 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[Add your project setup instructions here]
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies & Libraries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Next.js
+[Next.js](https://nextjs.org/) is a powerful React framework that enables server-side rendering, static site generation, and provides an enhanced development experience. It offers built-in optimizations for performance and SEO, making it an ideal choice for modern web applications.
 
-## Deploy on Vercel
+### TailwindCSS
+[TailwindCSS](https://tailwindcss.com/) is a utility-first CSS framework that allows rapid UI development by providing low-level utility classes. It enables developers to build custom designs without leaving your HTML, offering flexibility and performance through its purge and optimization features.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### React & React DOM
+[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces, allowing developers to create reusable UI components. [React DOM](https://reactjs.org/docs/react-dom.html) provides DOM-specific methods for rendering React components in web browsers.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Axios
+[Axios](https://axios-http.com/) is a promise-based HTTP client for making seamless API requests. It supports interceptors, automatic transforms for JSON data, and works in both browser and Node.js environments, simplifying data fetching and communication.
+
+### React Icons
+[React Icons](https://react-icons.github.io/react-icons/) offers a comprehensive collection of popular icon packs as React components. It provides easy integration of icons from libraries like Font Awesome, Material Design, and more with minimal configuration.
+
+### React Hot Toast
+[React Hot Toast](https://react-hot-toast.com/) is a lightweight, customizable notification library for React applications. It provides beautiful, responsive toast notifications with simple and flexible APIs for various use cases.
+
+### EmailJS
+[EmailJS](https://www.emailjs.com/) enables sending emails directly from client-side JavaScript, eliminating the need for a backend email service. It integrates with multiple email providers and supports template-based email composition.
+```
