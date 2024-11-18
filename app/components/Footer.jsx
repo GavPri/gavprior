@@ -4,8 +4,6 @@ import { MdOutlineCopyright } from "react-icons/md";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { TfiEmail } from "react-icons/tfi";
 
-import React from 'react'
-
 const Footer = () => {
   return (
     <section className="w-full h-16 mb-4 flex justify-between items-center">
