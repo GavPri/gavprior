@@ -92,6 +92,9 @@ const Page = () => {
     } catch (error) {
       toast.error("There was an issue with your message.");
     }
+    finally{
+      setIsSending(false)
+    }
   };
 
   return (
