@@ -7,6 +7,7 @@ export const metadata = {
 import Navbar from "./components/Navbar";
 
 import { Roboto_Flex } from "next/font/google";
+import Footer from "./components/Footer";
 
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className="dark flex flex-col justify-center items-center max-w-3xl bg-background overflow-x-hidden mx-8 sm:mx-auto">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
