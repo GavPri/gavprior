@@ -5,16 +5,14 @@ import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
-// TODO -- Create state for the form.
-// TODO -- add handle change for form input fields.
-// TODO -- add a handle submit for the form to send to my email.
-// TODO -- redirect users to the home page with toast notification.
 const page = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [error, setError] = useState("");
 
   const hanldeChange = (e) => {
     const { name, value } = e.target;
