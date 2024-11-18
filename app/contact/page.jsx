@@ -13,7 +13,7 @@ const Page = () => {
     message: "",
   });
 
-  const [isSending, setIsSending] = useState("false");
+  const [isSending, setIsSending] = useState(false);
 
   const router = useRouter(); // Initialize router to handle page navigation
 
@@ -156,7 +156,7 @@ const Page = () => {
               </svg>
             </p>
           ) : (
-            <p>
+            <p className="inline-flex justify-evenly items-center">
               {" "}
               Send Message <IoPaperPlaneOutline size={25} className="ml-4" />
             </p>
