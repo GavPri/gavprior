@@ -5,6 +5,7 @@ export const metadata = {
 };
 
 import Navbar from "./components/Navbar";
+import { Toaster } from "react-hot-toast";
 
 import { Roboto_Flex } from "next/font/google";
 
