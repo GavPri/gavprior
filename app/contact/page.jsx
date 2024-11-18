@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import React, { useState } from "react";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
@@ -19,29 +20,39 @@ const page = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // logic to submit
     const service_id = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const template_id = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const public_key = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    const data = {
-      serviceID: service_id,
-      templateID: template_id,
-      userID: public_key,
-      templateParams: {
-        from_name: formData.name,
-        from_email: formData.email,
-        to_name: "Gavin",
-        message: formData.message,
-      },
-    };
+  const data = {
+    service_id: service_id, 
+    template_id: template_id,
+    user_id: public_key, 
+    template_params: {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_name: "Gavin", 
+      message: formData.message,
+    },
+  };
+
+
+    try {
+      console.log(data)
+      const response = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data
+      );
+      console.log(response.data);
+    } catch (error) {}
   };
   return (
     <section className="mt-8 flex flex-col gap-8 pb-16 w-full">
       <h1 className="text-2xl text-foreground font-bold">Contact Me</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <div className="h-16">
             <input
