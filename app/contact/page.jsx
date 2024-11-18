@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
+
+// TODO -- Create state for the form.
+// TODO -- add handle change for form input fields.
+// TODO -- add a handle submit for the form to send to my email.
+// TODO -- redirect users to the home page with toast notification.
 const page = () => {
   return (
     <section className="mt-8 flex flex-col gap-8 pb-16 w-full">
