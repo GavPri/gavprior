@@ -22,6 +22,9 @@ const page = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // logic to submit
+    const service_id = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const template_id = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const public_key = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
   };
   return (
     <section className="mt-8 flex flex-col gap-8 pb-16 w-full">
