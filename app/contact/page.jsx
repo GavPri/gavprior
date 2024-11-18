@@ -14,7 +14,7 @@ const page = () => {
 
   const hanldeChange = (e) => {
     const { name, value, message } = e.target;
-    setFormData((prevData) => ({}))
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
   return (
     <section className="mt-8 flex flex-col gap-8 pb-16 w-full">
